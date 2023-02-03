@@ -1039,7 +1039,7 @@ export function execfunction(
     }
   }
 
-  return [true, _.isNil(formulaError) ? result : formulaError, txt];
+ return [true, _.isNil(formulaError) ? result : formulaError, txt];
 }
 
 function insertUpdateDynamicArray(ctx: Context, dynamicArrayItem: any) {
@@ -1130,16 +1130,12 @@ export function execFunctionGroup(
   if (_.isNil(ctx.formulaCache.execFunctionGlobalData)) {
     ctx.formulaCache.execFunctionGlobalData = {};
   }
-  // let luckysheetfile = getluckysheetfile();
-  // let dynamicArray_compute = luckysheetfile[getSheetIndex(ctx.currentSheetId)_.isNil(]["dynamicArray_compute"]) ? {} : luckysheetfile[getSheetIndex(ctx.currentSheetId)]["dynamicArray_compute"];
 
   if (_.isNil(id)) {
     id = ctx.currentSheetId;
   }
 
   if (!_.isNil(value)) {
-    // 此处setcellvalue 中this.execFunctionGroupData会保存想要更新的值，本函数结尾不要设为null,以备后续函数使用
-    // setcellvalue(origin_r, origin_c, _this.execFunctionGroupData, value);
     const cellCache: Cell[][] = [[{ v: undefined }]];
     setCellValue(ctx, 0, 0, cellCache, value);
     [
