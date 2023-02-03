@@ -1127,19 +1127,6 @@ export function execFunctionGroup(
     data = getFlowdata(ctx);
   }
 
-  // if (!window.luckysheet_compareWith) {
-  //   window.luckysheet_compareWith = luckysheet_compareWith;
-  //   window.luckysheet_getarraydata = luckysheet_getarraydata;
-  //   window.luckysheet_getcelldata = luckysheet_getcelldata;
-  //   window.luckysheet_parseData = luckysheet_parseData;
-  //   window.luckysheet_getValue = luckysheet_getValue;
-  //   window.luckysheet_indirect_check = luckysheet_indirect_check;
-  //   window.luckysheet_indirect_check_return = luckysheet_indirect_check_return;
-  //   window.luckysheet_offset_check = luckysheet_offset_check;
-  //   window.luckysheet_calcADPMM = luckysheet_calcADPMM;
-  //   window.luckysheet_getSpecialReference = luckysheet_getSpecialReference;
-  // }
-
   if (_.isNil(ctx.formulaCache.execFunctionGlobalData)) {
     ctx.formulaCache.execFunctionGlobalData = {};
   }
