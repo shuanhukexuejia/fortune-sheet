@@ -1039,22 +1039,6 @@ export function execfunction(
     }
   }
 
-  /*
-  if (sparklines) {
-    return [true, result, txt, { type: "sparklines", data: sparklines }];
-  }
-
-  if (dynamicArrayItem) {
-    return [
-      true,
-      result,
-      txt,
-      { type: "dynamicArrayItem", data: dynamicArrayItem },
-    ];
-  }
-  */
-
-  // console.log(result, txt);
   return [true, _.isNil(formulaError) ? result : formulaError, txt];
 }
 
